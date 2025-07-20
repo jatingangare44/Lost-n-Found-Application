@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group>
+        <item android:id="@+id/nav_account"
+            android:icon="@drawable/baseline_account_circle_24"
+            android:title="Account"/>
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home"/>
+
+
+    </group>
+
+<item android:title="">
+    <menu>
+        <item android:id="@+id/nav_acceptreq"
+            android:icon="@drawable/baseline_thumb_up_24"
+            android:title="Accepted Request"/>
+        <item
+            android:id="@+id/nav_item_handed_over"
+            android:icon="@drawable/baseline_handshake_24"
+            android:title="Item Handed Over" />
+
+    </menu>
+</item>
+
+    <item android:title="">
+        <menu>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="Logout" />
+
+        </menu>
+    </item>
+
+</menu>

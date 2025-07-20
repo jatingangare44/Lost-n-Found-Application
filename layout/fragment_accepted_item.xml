@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Back Arrow Button -->
+    <ImageButton
+        android:id="@+id/btnBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:background="@drawable/rounded_corner_image"
+        android:layout_margin="8dp"
+        android:layout_gravity="start|top"
+        />
+
+    <!-- Centered Title TextView -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accepted Items"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"/>
+
+    <!-- RecyclerView for Accepted Items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAcceptedItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp"/>
+</FrameLayout>

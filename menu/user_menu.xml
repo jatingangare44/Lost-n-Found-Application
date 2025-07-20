@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Home"
+        android:id="@+id/user_home"
+        android:icon="@drawable/baseline_home_24"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Accepted"
+        android:id="@+id/user_accepted_request"
+        android:icon="@drawable/baseline_thumb_up_24"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Got Item"
+        android:id="@+id/user_got_item"
+        android:icon="@drawable/baseline_check_circle_24"/>
+</menu>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@drawable/background_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/addlostitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Lost Item"
+            android:textSize="24dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+        <!-- Label for Item Image -->
+        <TextView
+            android:id="@+id/item_image_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addlostitem"
+            android:text="Item Image or Item Bill:"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+
+        <!-- Item Image -->
+        <ImageView
+            android:id="@+id/item_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/item_image_label"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/baseline_upload_file_24"
+            android:contentDescription="@string/item_image"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+
+        <!-- Label for Aadhar Card -->
+        <TextView
+            android:id="@+id/adhar_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aadhar Card:"
+            android:textSize="18sp"
+            android:layout_below="@id/item_photo"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+
+        <!-- Aadhar Card Image -->
+        <ImageView
+            android:id="@+id/adhar_card_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/adhar_label"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/baseline_upload_file_24"
+            android:contentDescription="@string/adhar_image"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adhar_card_photo"
+        android:background="@drawable/rounded_corner_image"
+        android:padding="20dp">
+        <EditText
+            android:id="@+id/adhar_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Aadhar Number"
+            />
+
+        <!-- Item Name -->
+        <EditText
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adhar_number"
+            android:hint="Item Name"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            />
+
+        <!-- Item Description -->
+        <EditText
+            android:id="@+id/item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_name"
+            android:hint="Item Description"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:inputType="textMultiLine"
+            />
+
+        <!-- Location Lost -->
+        <EditText
+            android:id="@+id/item_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_description"
+            android:hint="Location"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            />
+
+        <!-- Date and Time Lost -->
+        <EditText
+            android:id="@+id/item_datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_location"
+            android:hint="Date and Time"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:focusable="false"
+            android:clickable="true"
+            />
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_datetime"
+            android:hint="User Name"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            />
+
+        <!-- Phone Number -->
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:hint="Phone Number"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            />
+    </RelativeLayout>
+
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativelayout"
+            android:text="Submit"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submit_button"
+            android:text="Cancel" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupImageType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_image_label"
+            android:layout_toRightOf="@id/item_photo"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:singleSelection="true"
+            android:layout_marginLeft="20dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOriginalImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Orignal Item"
+                    style="@style/Widget.Material3.Chip.Filter.Elevated" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipLookAlike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Look Alike"
+                    style="@style/Widget.Material3.Chip.Filter.Elevated"
+                    />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </RelativeLayout>
+
+</ScrollView>
